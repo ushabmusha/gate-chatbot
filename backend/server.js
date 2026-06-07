@@ -267,9 +267,9 @@ D) Database Definition Logic
 Good luck for GATE!
 `
 
-  return res.json({
-    text: fallbackText
-  })
+  return res.status(500).json({
+  error: data?.error?.message || 'Gemini API Error'
+})
 }
 
     const text =
